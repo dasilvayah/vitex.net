@@ -1,0 +1,142 @@
+@import "~assets/vars.scss";
+
+$blue: #007AFF;
+$red: #E5494D;
+$green: #00D764;
+$down-font-color: $red;
+$up-font-color: $green;
+$font-normal:PingFangSC-Regular;
+$font-bold: PingFangSC-Semibold,arial,sans-serif;
+
+.down {
+    color: $down-font-color;
+}
+.up {
+    color: $up-font-color
+}
+.buy {
+    color: $green;
+}
+.sell {
+    color: $red;
+}
+
+.ex-tab-list {
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    color: white;
+    margin-bottom: 20px;
+    .ex-tab {
+        display: inline-block;
+        font-size:14px;
+        font-family:$font-family-light;
+        font-weight:600;
+        color:rgba(126,128,133,1);
+        line-height:18px;
+        padding: 6px 0 6px 0;
+        margin-right: 30px;
+        &.active {
+            color: white;
+            border-bottom: 2px solid white;
+        }
+    }
+}
+
+.__center-title {
+    padding: 6px;
+    line-height: 17px;
+    font-size: 13px;
+    font-family: $font-bold, arial, sans-serif;
+    font-weight: 600;
+    color: rgba(29,32,36,0.6);
+    background: #f7f9fb;
+}
+
+.__center-tb-title {
+    display: flex;
+    flex-direction: row;
+    padding: 0 6px;
+    height: 27px;
+    line-height: 27px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(126,128,133,1);
+}
+.__center-tb-row {
+    position: relative;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 6px;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    &:hover {
+        background:rgba(216,216,216,0.1); 
+    }
+}
+.__center-tb-item {
+    position: relative;
+    text-align: right;
+    flex: 1;
+    padding: 0 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    &:first-child {
+        text-align: left;
+    }
+    &.left {
+        text-align: left;
+    }
+
+    &.tx-pair {
+        min-width: 95px;
+    }
+    &.depth {
+        flex: none;
+        &.price {
+            flex: 1;
+        }
+        &.quantity {
+            width: 85px;
+        }
+        &.amount {
+            flex: 1;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.__ex-loading-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.input-wrapper {
+    display: flex;
+    width: 250px;
+    font-size: 14px;
+    height: 34px;
+    line-height:18px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(216,216,216,0.3);
+    input {
+        outline:none;
+        border-width: 0;
+        flex: 1;
+        width: 100%;
+        background-color: transparent;
+        text-align: right;
+        color: white;
+        font-size:14px;
+        font-family:$font-family-light;
+        font-weight:400;
+        line-height:18px;
+    }
+}
+
+@import './operator.scss';

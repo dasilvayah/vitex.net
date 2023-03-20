@@ -1,0 +1,99 @@
+@import "customBulma";
+@import "hover";
+
+@import "vars";
+@import "tootips";
+
+body {
+  font-family: $font-family-light;
+}
+
+h1 {
+  font-size: 44px;
+  color: #171C34;
+  line-height:62px;
+  font-family: $font-family-title;
+  @include mobile {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+// pointer 
+.__pointer {
+  cursor: pointer;
+}
+
+// common button
+.text-btn{
+  font-size: 14px;
+  font-family: $font-family-title;
+  color: $common-active-color;
+  cursor: pointer;
+}
+
+// gradient button
+.main-btn{
+  display: inline-block;
+  min-width: 100px;
+  height: auto;
+  line-height: 38px;
+  padding: 0 1em;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(90deg, $common-active-color 30%, rgba(0,122,255,1) 96%);
+  cursor: pointer;
+}
+
+// transition
+
+.text-hover-transition {
+  transition: color 0.4s ease-in-out;
+}
+
+// headroom
+.headroom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: transform 0.6s ease;
+}
+.headroom.headroom--pinned {
+  transform: translateY(0);
+}
+.headroom.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+// input
+
+.input:focus, .input.is-focused, .input:active, .input.is-active, .textarea:focus, .textarea.is-focused, .textarea:active, .textarea.is-active {
+  border-color: $light-blue;
+  box-shadow: 0 0 0 0.125em rgba(54,130,222, 0.25);
+}
+
+.button:focus, .button.is-focused {
+  border-color: $light-blue;
+  color: $light-blue;
+}
+
+.button:focus:not(:active), .button.is-focused:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(54,130,222, 0.25);
+}
+
+.index-main-title {
+  font-size:32px;
+  font-family:$font-family-light;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  line-height:45px;
+  margin-bottom: 30px;
+  text-align: center;
+}

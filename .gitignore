@@ -1,0 +1,10 @@
+.idea/
+dist
+.nuxt
+node_modules
+package-lock.json
+
+.DS_Store
+assets/.DS_Store
+static.tar
+*.log
